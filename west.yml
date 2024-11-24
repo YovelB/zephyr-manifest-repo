@@ -1,0 +1,25 @@
+# West Manifest File (west.yml)
+# Purpose: Define dependencies for for zephyr RTOS projects with Nucleo STM32G474RE 
+# Type: T3 Forest topology - freestanding manifest repository
+
+manifest:
+  remotes:
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos
+
+  projects:
+    - name: zephyr
+      remote: zephyrproject-rtos
+      revision: main
+      import:
+        # By using name-allowlist we can clone only the modules that are
+        # strictly needed by the application.
+        name-allowlist:
+          - cmsis       # (required) Core ARM architecture support module 
+          - cmsis-dsp   # (required) DSP functions library for signal processing
+          - hal_st      # (required) STM base HAL module
+          - hal_stm32   # (required) STM32G4 specific HAL module
+          - littlefs    # (optional) Filesystem modules for data logging
+
+  self:
+    path: manifest-repo

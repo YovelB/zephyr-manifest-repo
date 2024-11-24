@@ -1,0 +1,47 @@
+# Build directories
+/build*/
+/twister-out*/
+
+# Python virtual environments
+.venv/
+env/
+venv/
+
+# IDE specific files
+.vscode/
+.idea/
+*.swp
+*~
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# West specific
+.west/
+
+# CMake files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+# Compiled output
+*.o
+*.a
+*.so
+*.elf
+*.hex
+*.bin
+*.map
+
+# Debug files
+*.lst
+*.sym
+
+# Backup files
+*.bak
+*.orig
+
+# OS specific files
+.DS_Store
+.directory
