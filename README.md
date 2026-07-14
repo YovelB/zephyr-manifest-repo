@@ -1,5 +1,8 @@
 ## minimal T3 topology manifest repo for zephyr
 
+~/UserWorkspace/zephyr-workspace
+manifest-repo  modules  projects  zephyr
+
 ## quick start
 
 ```bash
